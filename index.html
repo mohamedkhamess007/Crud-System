@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>CRUD SYSTEM</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+      <div class="container">
+        <a class="navbar-brand" href="#">MoKhames</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="design-form text-center">
+      <div class="title pt-3">
+        <h1 class="text-white">CRUD SYSTEM</h1>
+      </div>
+      <div class="container pt-5 pb-5">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            placeholder="Prodect Name"
+          />
+          <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="productPrice"
+            placeholder="Prodect Price"
+          />
+          <label for="productPrice">Product Price</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            list="catgory"
+            type="text"
+            class="form-control"
+            id="productCategory"
+            placeholder="Prodect Catgory"
+          />
+          <datalist id="catgory">
+            <option value="Tv"></option>
+            <option value="Mobaile"></option>
+            <option value="Screens"></option>
+            <option value="Electronic"></option>
+            <option value="Camera"></option>
+          </datalist>
+          <label for="productCategory">Product Catgory</label>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+            style="height: 100px"
+          ></textarea>
+          <label for="floatingTextarea2">Description</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="file"
+            class="form-control"
+            id="productImage"
+            placeholder="Prodect Image"
+          />
+          <label for="productCategory">Product Image</label>
+        </div>
+        <div class="btn btn-primary" onclick="addProduct()" id="btnAdd">
+          Add Product
+        </div>
+        <div
+          class="btn btn-warning d-none"
+          id="btnUpdate"
+          onclick=" setNewUpdate()"
+        >
+          Update Product
+        </div>
+      </div>
+      <div class="form-floating mt-3 mb-3 w-75 m-auto">
+        <input
+          oninput="search()"
+          type="search"
+          class="form-control"
+          id="productSearch"
+          placeholder="Search By Name "
+        />
+        <label for="productSearch">Search</label>
+      </div>
+    </div>
+    <section>
+      <div class="container-fluid">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Catgory</th>
+              <th>Description</th>
+              <th>Image</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="displayData"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+body {
+    background-color: #1D1C30;
+    font-family     : 'Mona Sans';
+    /* color        : antiquewhite; */
+}
+
+a.navbar-brand {
+    font-size: 30px;
+}
+
+#updateP {
+    background-color: #AB90FD !important;
+}
+
+#deleteProduct {
+    background-color: #231F35;
+}
+
+.imgMax img {
+    transition        : all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition   : all 1s;
+    -ms-transition    : all 1s;
+    -o-transition     : all 1s;
+}
+
+.imgMax img:hover {
+
+    padding-top: 10px;
+
+    transform        : scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    -moz-transform   : scale(2, 2);
+    -ms-transform    : scale(2, 2);
+    -o-transform     : scale(2, 2);
+}
+
+#displayData td {
+    font-size: 18px;
+}
+
+td.price {
+    background-color     : #AB90FD;
+    border               : #1D1C30 solid 1px;
+    border-radius        : 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius   : 15px;
+    -ms-border-radius    : 15px;
+    -o-border-radius     : 15px;
+    transition           : all 0.9s;
+    -webkit-transition   : all 0.9s;
+    -moz-transition      : all 0.9s;
+    -ms-transition       : all 0.9s;
+    -o-transition        : all 0.9s;
+}
+
+td.price:hover {
+    background-color: bisque;
+}
